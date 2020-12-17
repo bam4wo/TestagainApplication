@@ -91,7 +91,7 @@ public class SignupActivity extends AppCompatActivity {
                             data[1] = email;
                             data[2] = password;
                             data[3] = password2;
-                            PutData putData = new PutData("https://192.168.137.1/Hospital/signup.php", "POST", field, data); //網址要改成自己的php檔位置及自己的ip
+                            PutData putData = new PutData("https://192.168.1.109/Hospital/signup.php", "POST", field, data); //網址要改成自己的php檔位置及自己的ip
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);

@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        getImei();//得到IMEI
+//        getImei();//得到IMEI
 //        checkDivicd();
         findView();
 
@@ -122,7 +122,7 @@ public class LoginActivity extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = email;
                             data[1] = password;
-                            PutData putData = new PutData("http://192.168.137.1/Hospital/login.php", "POST", field, data); //網址要改成自己的php檔位置及自己的ip
+                            PutData putData = new PutData("http://192.168.1.109/Hospital/login.php", "POST", field, data); //網址要改成自己的php檔位置及自己的ip
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     progressBar.setVisibility(View.GONE);
@@ -168,7 +168,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //顯示或隱藏密碼
-        cb = findViewById(R.id.showpswcheckBox);
+        cb = findViewById(R.id.checkBox2);
         cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -270,7 +270,7 @@ public class LoginActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(LoginActivity.this, new String[]{Manifest.permission.READ_PHONE_STATE}, REQUEST_CODE);
             return;
         }
-        IMEINumber = telephonyManager.getDeviceId();
+        //IMEINumber = telephonyManager.getDeviceId();
         imei.setText(IMEINumber);
 //        new AlertDialog.Builder(this)
 //                .setTitle("手機識別碼讀取結果")

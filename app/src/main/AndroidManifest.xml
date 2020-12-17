@@ -11,9 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TestaginApplication">
         android:usesCleartextTraffic="true"
-        <activity android:name=".WellcomeActivity"></activity>
+        android:theme="@style/Theme.TestaginApplication">
+        <activity android:name=".WellcomeActivity">
+
+        </activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity" />
         <activity
